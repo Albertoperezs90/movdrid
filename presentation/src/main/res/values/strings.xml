@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">movdrid</string>
+
+    <string name="splash_welcome">Bienvenido!</string>
 </resources>

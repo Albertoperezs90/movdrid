@@ -1,10 +1,27 @@
-apply from: '../base.gradle'
+apply from: '../baselibrary.gradle'
+
+android {
+
+    buildTypes {
+
+        debug {
+            buildConfigField "String", "BASE_URL", "\"https://services5.arcgis.com/UxADft6QPcvFyDU1/arcgis/rest/services/\""
+        }
+
+        release {
+            buildConfigField "String", "BASE_URL", "\"https://services5.arcgis.com/UxADft6QPcvFyDU1/arcgis/rest/services/\""
+        }
+    }
+}
 
 dependencies {
     implementation project(":domain")
 
     implementation dataDependencies.retrofit
+    implementation dataDependencies.retrofitGson
     implementation dataDependencies.roomRuntime
-    implementation dataDependencies.roomCompiler
+
+
+    kapt dataDependencies.roomCompiler
     implementation dataDependencies.roomCoroutines
 }

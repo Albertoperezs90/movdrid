@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 
 android {
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
@@ -28,6 +30,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation commonDependencies.kotlin
+    implementation commonDependencies.koin
+    implementation commonDependencies.coroutines
+
     testImplementation commonDependencies.mockito
     testImplementation commonDependencies.jUnit
 }

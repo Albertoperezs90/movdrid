@@ -1,11 +1,21 @@
-apply from: '../base.gradle'
+apply from: '../baselibrary.gradle'
+
+android {
+
+    dataBinding {
+        enabled = true
+    }
+}
 
 dependencies {
     implementation project(":domain")
 
     implementation presentationDependencies.support
+    implementation presentationDependencies.constraintLayout
     implementation presentationDependencies.viewModel
     implementation presentationDependencies.liveData
+    implementation presentationDependencies.koinViewmodel
+    implementation presentationDependencies.coroutinesAndroid
 
     testImplementation presentationDependencies.espresso
     testImplementation presentationDependencies.androidTest

@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation commonDependencies.kotlin
+    implementation commonDependencies.koin
+    implementation commonDependencies.coroutines
+}
+
+
+repositories {
+    mavenCentral()
+}
