@@ -10,10 +10,10 @@ Esta aplicación nacio con la idea de poner en funcionamiento buenas practicas y
 
 Se ha seguido el patron Clean Architecture propuesto por Uncle Bob así como MVVM y LiveData de Jetpack, se ha montado todo con corutinas para generar la asincronia necesaria para las llamadas a la API, el modelado de Clean Architecture se ha construido con los siguientes principios:
 
-Presentation -> Domain
-Data -> Domain
-Domain
-DI -> Presentation, Data, Domain.
+* Presentation -> Domain
+* Data -> Domain
+* Domain
+* DI -> Presentation, Data, Domain.
 
 De esta manera logramos que Domain sea un completo inconsciente de las capas externas, y que Presentation no sepa nada de Data así como Data de Presentation.
 
