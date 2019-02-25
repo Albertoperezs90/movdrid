@@ -1,6 +1,6 @@
-package com.tutorial.aperezsi.data.entities
+package com.tutorial.aperezsi.data.entities.common
 
 data class Geometry(
-    val x: Long? = null,
-    val y: Long? = null
+    val x: Double? = null,
+    val y: Double? = null
 )

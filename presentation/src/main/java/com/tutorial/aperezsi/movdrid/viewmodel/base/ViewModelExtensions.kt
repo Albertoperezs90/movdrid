@@ -2,10 +2,10 @@ package com.tutorial.aperezsi.movdrid.viewmodel.base
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.async
 
 fun BaseViewModel.async(bg: suspend () -> Unit) {
-    GlobalScope.launch(Dispatchers.Main) {
+    GlobalScope.async(Dispatchers.Main) {
         bg()
     }
 }

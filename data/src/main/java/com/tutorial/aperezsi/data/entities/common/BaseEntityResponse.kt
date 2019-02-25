@@ -1,4 +1,4 @@
-package com.tutorial.aperezsi.data.entities
+package com.tutorial.aperezsi.data.entities.common
 
 data class BaseEntityResponse<T>(
     val objectIdFieldName: String? = null,

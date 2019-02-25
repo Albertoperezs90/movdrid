@@ -1,5 +1,6 @@
 package com.tutorial.aperezsi.movdrid.view
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.tutorial.aperezsi.movdrid.R
 import com.tutorial.aperezsi.movdrid.databinding.ActivitySplashBinding

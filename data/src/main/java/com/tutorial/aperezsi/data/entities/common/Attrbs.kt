@@ -1,4 +1,4 @@
-package com.tutorial.aperezsi.data.entities
+package com.tutorial.aperezsi.data.entities.common
 
 data class Attrbs(
     val OBJECTID: Int? = null,

@@ -1,4 +1,7 @@
 package com.tutorial.aperezsi.domain.usecases.base
 
-interface UseCaseExecutor {
+import com.tutorial.aperezsi.domain.result.Either
+
+interface UseCaseExecutor<F,S> {
+    suspend fun execute(delayed: Long = 0) : Either<F, S>
 }

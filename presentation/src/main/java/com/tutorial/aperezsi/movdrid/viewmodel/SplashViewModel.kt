@@ -33,8 +33,7 @@ class SplashViewModel(
             val subWay = getSubWayUseCase.execute()
             val lightSubWay = getLightSubWayUseCase.execute()
 
-            buses.fold( { /* HANDLER ERROR */ },
-                        { /* HANDLER SUCCESS */ })
+            buses.fold( { handlerError(it) }, { handleSucces(it) })
 
             subUrban.fold( { /* HANDLER ERROR */ },
                         { /* HANDLER SUCCESS */ })
@@ -43,7 +42,20 @@ class SplashViewModel(
                         { /* HANDLER SUCCESS */ })
 
             lightSubWay.fold( { /* HANDLER ERROR */ },
-                        { /* HANDLER SUCCESS */ })
+                              { /* HANDLER SUCCESS */ })
         }
     }
+
+    private fun handleSucces(it: List<Bus>) {
+
+    }
+
+    private fun handlerError(it: GetBusesError) {
+        when (it){
+            is GetBusesError.EmptyData -> { }
+            is GetBusesError.RepositoryFailure -> {}
+        }
+    }
+
+
 }
